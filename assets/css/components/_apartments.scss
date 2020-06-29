@@ -1,0 +1,15 @@
+.apartment-list__content-header {
+    margin-bottom: $spacing--base * 0.625;
+
+    >* {
+        margin-right: $spacing--base * 0.625;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.checkout-times li strong {
+    margin-right: 1rem;
+}

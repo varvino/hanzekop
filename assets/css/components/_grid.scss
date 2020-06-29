@@ -1,0 +1,167 @@
+/* ##############################################
+    Grids Setup
+################################################*/
+
+/* ##############################################
+    Initialization
+################################################*/
+.grid {
+    display: grid;
+}
+
+/* ##############################################
+    Grid Columns
+################################################*/
+.grid-column {
+    grid-template-columns: 1fr;
+}
+
+.grid-column--two {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--md {
+        @include medium {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &--lg {
+        @include large {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+.grid-column--three {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--lg {
+        @include large {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &--xl {
+        @include extra-large {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.grid-column--four {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ##############################################
+    Custom Grid Columns
+################################################*/
+.grid-column--half-two {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: 0.5fr 2fr;
+    }
+}
+
+.grid-column--half-two-half {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: 0.5fr 2fr 0.5fr;
+    }
+}
+
+.grid-column--third-two-half {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: 1fr 2fr 0.5fr;
+    }
+
+    @include large {
+        grid-template-columns: 0.75fr 2fr 0.5fr;
+    }
+}
+
+.grid-column--one-two-half {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: 1fr 2fr 0.5fr;
+    }
+}
+
+.grid-column--one-two-one {
+    grid-template-columns: 1fr;
+
+    @include medium {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+/* ##############################################
+    Grid Column Spans
+################################################*/
+.grid-column__span--two {
+    @include medium {
+        grid-column: span 2;
+    }
+}
+
+/* ##############################################
+    Grid Rows
+################################################*/
+.grid-row--zero-one {
+    grid-template-rows: 0fr 1fr;
+}
+
+.grid-row-height--md {
+    grid-template-rows: 225px;
+}
+
+/* ##############################################
+    Grid Spacing
+################################################*/
+.grid-spacing--one {
+    gap: 1rem;
+}
+
+.grid-spacing--two {
+    gap: 2.1875rem;
+
+    @include medium {
+        gap: 3.125rem;
+    }
+}
+
+.grid-spacing--three {
+    gap: 3.125rem;
+
+    @include medium {
+        gap: 4.6875rem;
+    }
+}
+
+.grid-spacing--four {
+    gap: 1.875rem;
+
+    @include medium {
+        gap: 4.6875rem;
+    }
+
+    @include medium-large {
+        gap: 6.25rem;
+    }
+}

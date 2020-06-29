@@ -1,0 +1,53 @@
+footer {
+    border-top: 0.0625rem solid $color--grey;
+    margin-top: 1.5625rem;
+    padding   : 1.5625rem 0;
+
+    @include medium {
+        margin-top: 3.125rem;
+    }
+
+    @include medium-large {
+        margin-top   : 4.6875rem;
+        margin-bottom: 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+
+        @include small {
+            align-items: flex-start;
+        }
+
+        @include medium {
+            padding: 0;
+        }
+
+        @include medium-large {
+            flex-direction: row;
+        }
+    }
+
+    .logo {
+        margin-bottom: 1.5625rem;
+
+        @include medium {
+            margin-bottom: 0;
+        }
+    }
+
+    .logo__image {
+        max-width: 2.5rem;
+    }
+
+    .navmenu {
+        .menu-item a {
+            color: $font-color--grey;
+        }
+    }
+}
+
+.copyright {
+    color     : $font-color--grey;
+    text-align: center;
+}

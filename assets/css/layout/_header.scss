@@ -1,0 +1,54 @@
+/* ##############################################
+    Header
+################################################*/
+header {
+    padding      : 0.9375rem 0;
+    margin-bottom: $spacing--two;
+
+    border-bottom: 0.0625rem solid $color--grey;
+
+    @include medium {
+        margin-bottom: 3.125rem;
+    }
+
+    @include medium-large {
+        padding      : $spacing--two 0;
+        margin-bottom: $spacing--nine;
+    }
+
+    &.contact-page {
+        border-color: darken($color: $color--secondary, $amount: 13);
+    }
+}
+
+/* ##############################################
+    Header Navmenu
+################################################*/
+header {
+    .navmenu {
+        position: relative;
+        z-index : 999;
+
+        @include small {
+            display         : none;
+            background-color: white;
+            border-radius   : $border-radius--base;
+            position        : fixed;
+            bottom          : 5.3125rem;
+            left            : 0;
+            right           : 0;
+            width           : 90%;
+            margin          : 0 auto;
+            padding         : 1.875rem;
+        }
+    }
+
+    // Hide last nav item on small devices
+    .menu-item:last-child {
+        display: none;
+
+        @include medium {
+            display: inherit;
+        }
+    }
+}

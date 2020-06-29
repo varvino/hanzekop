@@ -1,0 +1,278 @@
+/* ##############################################
+    Layout
+################################################*/
+/* ##############################################
+    Container Classes
+################################################*/
+.container {
+    width : 90%;
+    margin: 0 auto;
+    flex  : 1 0 auto;
+
+    @include medium {
+        width: 80%;
+    }
+
+    @include medium-large {
+        width    : 70%;
+        max-width: 800px;
+    }
+
+    @include large {
+        width    : 60%;
+        max-width: 1000px;
+    }
+}
+
+/* ##############################################
+    Margin Helpers
+################################################*/
+/* ##############################################
+    Margin Top
+################################################*/
+.margin--none {
+    margin: 0;
+}
+
+.margin-vertical--xl {
+    margin: $spacing--base * 6 0;
+}
+
+/* ##############################################
+    Margin Top
+################################################*/
+.margin-top--none {
+    margin-top: 0;
+}
+
+.margin-top--sm {
+    margin-top: $spacing--base;
+}
+
+.margin-top--md {
+    margin-top: $spacing--base * 1.25;
+}
+
+.margin-top--lg {
+    margin-top: $spacing--base * 1.5;
+}
+
+.margin-top--xl {
+    margin-top: $spacing--base * 3;
+}
+
+/* ##############################################
+    Margin Bottom
+################################################*/
+.margin-bottom--none {
+    margin-bottom: 0;
+}
+
+.margin-bottom--sm {
+    margin-bottom: $spacing--base;
+}
+
+.margin-bottom--md {
+    margin-bottom: $spacing--base * 1.25;
+}
+
+.margin-bottom--lg {
+    margin-bottom: $spacing--base * 1.5;
+}
+
+.margin-bottom--xl {
+    margin-bottom: $spacing--base * 3;
+}
+
+/* ##############################################
+    Padding Helpers
+################################################*/
+/* ##############################################
+    No Padding
+################################################*/
+.padding--none {
+    padding: none;
+}
+
+/* ##############################################
+    Padding
+################################################*/
+.padding--sm {
+    padding: $spacing--base;
+
+    @include large {
+        padding: $spacing--two;
+    }
+}
+
+.padding--md {
+    padding: $spacing--two;
+
+    @include large {
+        padding: $spacing--three;
+    }
+}
+
+.padding--lg {
+    padding: $spacing--three;
+
+    @include large {
+        padding: $spacing--four;
+    }
+}
+
+/* ##############################################
+    Flex Classes
+################################################*/
+.flex {
+    display: flex;
+}
+
+.inline-flex {
+    display: inline-flex;
+}
+
+/* ##############################################
+    Flex Direction
+################################################*/
+.flex-direction--row {
+    flex-direction: row;
+}
+
+.flex-direction--row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-direction--column {
+    flex-direction: column;
+}
+
+.flex-direction--column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* ##############################################
+    Align Self
+################################################*/
+.align-self--start {
+    align-self: flex-start;
+}
+
+.align-self--end {
+    align-self: flex-end;
+}
+
+.align-self--center {
+    align-self: center;
+}
+
+/* ##############################################
+    Align Items
+################################################*/
+.align-items--start {
+    align-items: flex-start;
+}
+
+.align-items--end {
+    align-items: flex-end;
+}
+
+.align-items--center {
+    align-items: center;
+}
+
+/* ##############################################
+    Justify Self
+################################################*/
+.justify-self--start {
+    justify-self: flex-start;
+}
+
+.justify-self--end {
+    justify-self: flex-end;
+}
+
+.justify-self--center {
+    justify-self: center;
+    margin      : 0 auto;
+}
+
+/* ##############################################
+    Justify Content
+################################################*/
+.justify-content--start {
+    justify-content: flex-start;
+}
+
+.justify-content--end {
+    justify-content: flex-end;
+}
+
+.justify-content--center {
+    justify-content: center;
+    margin         : 0 auto;
+}
+
+.justify-content--space-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-content--space-around {
+    justify-content: space-around;
+}
+
+.justify-content--space-between {
+    justify-content: space-between;
+}
+
+/* ##############################################
+    Miscellaneous Classes
+################################################*/
+.border-radius--base {
+    border-radius: $border-radius--base;
+}
+
+.background-fill {
+    position : absolute;
+    top      : 0;
+    left     : 0;
+    z-index  : -1;
+    width    : 100%;
+    height   : 70%;
+    clip-path: polygon(0 0, 100% 0, 100% 63%, 0% 100%);
+}
+
+.background-fill--primary {
+    background-color: $color--primary;
+}
+
+.background-fill--secondary {
+    background-color: $color--secondary;
+}
+
+.border--full {
+    border: 1px solid;
+}
+
+.border-color--grey {
+    border-color: $color--grey;
+}
+
+.list--reset {
+    margin : 0;
+    padding: 0 0 0 $spacing--one;
+}
+
+.overflow--hidden {
+    overflow: hidden;
+}
+
+.spotlight {
+    transition: $transition--base;
+    position  : relative;
+    text-align: center;
+}
+
+.spotlight-overlay {
+    background-color: transparentize($color: #000000, $amount: 0.5);
+}

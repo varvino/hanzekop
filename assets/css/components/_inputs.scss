@@ -1,0 +1,60 @@
+.select-container {
+    position     : relative;
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 1.875rem;
+
+    &:after {
+        content       : "\f347";
+        font-family   : dashicons;
+        font-size     : 1.25rem;
+        color         : $font-color--grey;
+        pointer-events: none;
+
+        position: absolute;
+        right   : 0.3125rem;
+    }
+}
+
+select {
+    border            : 0.0625rem solid $color--grey;
+    border-radius     : $border-radius--base;
+    padding           : 0.625rem;
+    color             : $font-color--grey-darker;
+    background-color  : transparent;
+    font-size         : 0.875rem;
+    appearance        : none;
+    -webkit-appearance: none;
+    -moz-appearance   : none;
+    position          : relative;
+    width             : 100%;
+    outline           : none;
+
+    &:-ms-expand {
+        display: none;
+    }
+
+    option {
+        outline: none;
+        border : 0;
+    }
+}
+
+
+label {
+    margin-bottom: 0.625rem;
+}
+
+input,
+textarea {
+    font-family  : $font-family--base;
+    font-size    : $font-size--base;
+    border-radius: $border-radius--base;
+    border       : 0.0625rem solid $color--grey;
+    padding      : 0.625rem;
+    width        : 100%;
+}
+
+textarea {
+    min-height: 12.5rem;
+}

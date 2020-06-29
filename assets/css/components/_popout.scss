@@ -1,0 +1,41 @@
+.popout {
+    display         : flex;
+    flex-direction  : column;
+    background-color: white;
+    padding         : $spacing--four;
+    border-radius   : $border-radius--base;
+
+    @include medium {
+        padding  : $spacing--five;
+        max-width: 25rem;
+        margin   : 0;
+    }
+
+    >* {
+        margin-bottom: $spacing--three;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    h2 {
+        font-size: $font-size--base * 1.625;
+    }
+
+    .select-container {
+        margin: $spacing--base * 0.75 0 0 0;
+    }
+
+    .dropdown {
+        margin-bottom: 1.875rem;
+
+        label {
+            margin-bottom: 0.625rem;
+        }
+    }
+
+    .button {
+        align-self: flex-end;
+    }
+}

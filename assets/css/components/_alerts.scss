@@ -1,0 +1,19 @@
+.alert {
+    padding      : 0.625rem;
+    margin-bottom: $spacing--five;
+    border-radius: $border-radius--base;
+}
+
+.alert--primary {
+    background-color: $color--primary;
+    color           : $background-color;
+}
+
+.alert--secondary {
+    background-color: $color--secondary;
+}
+
+.alert--warning {
+    background-color: #cf3c3c;
+    color           : $background-color;
+}

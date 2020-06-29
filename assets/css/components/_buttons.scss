@@ -1,0 +1,46 @@
+.button {
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: center;
+    text-align     : center;
+    padding        : $spacing--base $spacing--three;
+    border-radius  : $border-radius--base;
+    transition     : $transition--base;
+    outline        : none;
+    border         : none;
+    font-size      : $font-size--base;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:after {
+        content    : "\f344";
+        font-family: "Dashicons";
+        margin-left: 0.3125rem;
+    }
+}
+
+.button--primary {
+    background-color: $color--primary;
+    color           : white;
+
+    &:hover {
+        background-color: darken($color: $color--primary, $amount: 15);
+    }
+}
+
+.button--secondary {
+    background-color: $color--secondary;
+    color           : black;
+
+    &:hover {
+        background-color: darken($color: $color--secondary, $amount: 15);
+    }
+}
+
+.button--download {
+    &:after {
+        content    : "\f316";
+    }
+}

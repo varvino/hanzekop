@@ -1,0 +1,30 @@
+.posts__loop {
+
+    @include medium {
+        display  : flex;
+        flex-wrap: wrap;
+    }
+
+    .post {
+        border-bottom : 0.0625rem solid #ccc;
+        padding-bottom: 1.5625rem;
+        margin-bottom : 1.5625rem;
+
+        @include medium {
+            flex         : 0 calc(50% - 1.5625rem);
+            margin-right : 1.5625rem;
+            border-bottom: 0;
+        }
+
+        &:nth-child(even) {
+            @include medium {
+                margin-right: 0;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+        }
+    }
+}

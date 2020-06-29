@@ -1,0 +1,43 @@
+.qlwf-send {
+    color: $color--primary;
+}
+
+.qlwapp-slide {
+    &:last-child {
+        max-height: 6.875rem !important;
+    }
+}
+
+#qlwapp {
+    width: initial !important;
+
+    @include medium {
+        max-width: 450px;
+    }
+}
+
+#qlwapp.qlwapp-button .qlwapp-toggle {
+    @include small {
+        padding      : 0 !important;
+        width        : 3rem !important;
+        height       : 3rem !important;
+        margin       : 0 !important;
+        border-radius: 50% !important;
+        bottom       : 1.25rem !important;
+        right        : 5.25rem !important;
+    }
+}
+
+.qlwapp-bottom-right {
+    .qlwapp-icon {
+        @include small {
+            margin: 0 !important;
+        }
+    }
+}
+
+.qlwapp-text {
+    @include small {
+        display: none;
+    }
+}

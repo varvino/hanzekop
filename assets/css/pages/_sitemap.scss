@@ -1,0 +1,39 @@
+.sitemap__loop-container {
+    margin-bottom: 1.5625rem;
+
+    @include medium {
+        margin-bottom: 3.125rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sitemap__loop {
+    display              : grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap                  : 0.9375rem;
+    justify-content      : flex-start;
+    align-items          : center;
+
+    @include medium {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include large {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.sitemap__link {
+    &:before {
+        content     : "\f344";
+        font-family : "Dashicons";
+        margin-right: $spacing--base;
+    }
+}

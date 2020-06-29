@@ -1,0 +1,145 @@
+.home {
+    header {
+        padding            : $spacing--two 0 $spacing--two;
+        margin-bottom      : 0;
+        border-bottom      : none;
+        background-repeat  : no-repeat;
+        background-position: center;
+        background-size    : cover;
+
+        @include medium {
+            padding: $spacing--four 0 $spacing--seven;
+        }
+
+        .menu-item a {
+            @include medium {
+                color: $background-color;
+            }
+        }
+
+        .logo__image,
+        .logo__text {
+            filter: $color__filtered--white;
+        }
+    }
+
+    .usp-container {
+        background-color: $color--secondary;
+        padding         : $spacing--base 0;
+        margin-bottom   : 3.125rem;
+
+        @include medium {
+            margin-bottom: 6.25rem;
+        }
+    }
+
+    .usp-list {
+        padding: 0;
+        margin : 0;
+    }
+
+    .usp__item {
+        display        : flex;
+        align-items    : center;
+        justify-content: center;
+        margin-bottom  : 0;
+
+        list-style: none;
+    }
+
+    .navmenu {
+
+        .logo__image,
+        .logo__text {
+            filter: none;
+        }
+    }
+
+    .navbar {
+        margin-bottom: $spacing--six;
+
+        @include medium {
+            margin-bottom: $spacing--seven;
+        }
+
+        @include medium-large {
+            margin-bottom: $spacing--nine;
+        }
+    }
+
+    footer {
+        margin-top: 3.125rem;
+
+        @include medium {
+            margin-top: 4.6875rem;
+        }
+
+        @include medium-large {
+            margin-top: 6.25rem;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+        }
+    }
+
+    /* ##############################################
+    Frontpage Components
+    ################################################*/
+    .background--secondary {
+        position        : absolute;
+        top             : 0;
+        left            : 0;
+        z-index         : 0;
+        background-color: $color--secondary;
+        width           : 100%;
+        height          : $spacing--base * 28;
+
+        display        : flex;
+        justify-content: flex-end;
+
+        .hero-image {
+            height    : $spacing--base * 28;
+            width     : 100%;
+            object-fit: cover;
+
+            @include medium {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
+                width    : 60%;
+            }
+        }
+    }
+}
+
+.frontpage-introduction {
+    @include medium {
+        margin-bottom: 6.25rem;
+    }
+}
+
+.frontpage-image {
+    width     : 100%;
+    height    : 400px;
+    object-fit: cover;
+}
+
+.neighborhood-photos {
+    border-radius: $border-radius--base;
+    overflow     : hidden;
+    height       : 100%;
+
+    @include medium {
+        height: 300px;
+    }
+
+    @include large {
+        height: 400px;
+    }
+
+    img {
+        width     : 100%;
+        height    : 100%;
+        min-height: 100%;
+        object-fit: cover;
+    }
+}

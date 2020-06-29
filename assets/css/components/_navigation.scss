@@ -1,0 +1,113 @@
+/* ##############################################
+    Header Navigation
+################################################*/
+.navbar {
+    display        : flex;
+    align-items    : center;
+    justify-content: space-between;
+}
+
+.navmenu {
+    @include medium {
+        display         : block;
+        border-radius   : 0;
+        position        : initial;
+        background-color: transparent;
+        padding         : 0;
+        width           : initial;
+        margin          : initial;
+    }
+
+    .logo {
+        padding      : 0;
+        margin-bottom: $spacing--three;
+
+        @include medium {
+            display: none;
+        }
+    }
+
+    .navigation {
+        @include medium {
+            display: inline-flex;
+        }
+    }
+
+    .menu-item {
+        list-style   : none;
+        margin-bottom: $spacing--three;
+
+        @include medium {
+            margin-bottom: 0;
+            margin-right : $spacing--three;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+
+            @include medium {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            display: block;
+            color  : inherit;
+
+            @include medium {
+                display: inline-block;
+            }
+        }
+    }
+
+    // Show button on small devices, hide on medium or above
+    .button {
+        display: inline-flex;
+
+        @include medium {
+            display: none;
+        }
+    }
+}
+
+// Navmenu toggle on small devices
+.js-navmenu--toggled {
+    display: block !important;
+}
+
+/* ##############################################
+    Navigation Components
+################################################*/
+// Backdrop when navigation toggled on small devices
+.backdrop {
+    position        : fixed;
+    top             : 0;
+    bottom          : 0;
+    left            : 0;
+    right           : 0;
+    z-index         : 997;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    @include medium {
+        display: none;
+    }
+}
+
+// Show hamburger on small devices, hide on medium or above devices
+.hamburger {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    position        : fixed;
+    bottom          : 1.25rem;
+    right           : 1.25rem;
+    background-color: $color--primary;
+    border-radius   : 50%;
+    width           : 3rem;
+    height          : 3rem;
+    z-index         : 1000;
+
+    @include medium {
+        display: none;
+    }
+}
