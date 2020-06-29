@@ -1,7 +1,7 @@
 .gallery {
     display              : grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows   : minmax(150px, 100%);
+    grid-template-rows   : minmax(150px, 300px);
     gap                  : 0.9375rem;
 
     @include medium {
