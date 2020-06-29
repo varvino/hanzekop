@@ -81,7 +81,7 @@ blockquote p:last-child{margin-bottom:0}
 .button--secondary{background-color:#f5ce45;color:black}
 .button--secondary:hover{background-color:#e1b20c}
 .button--download:after{content:"\f316"}
-.gallery{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(150px,100%);gap:.9375rem}
+.gallery{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:minmax(150px,300px);gap:.9375rem}
 .gallery__item:first-child{grid-row:span 2;grid-column:span 2}
 .gallery__item:nth-child(n+6){display:none}
 .gallery__item:nth-child(n+8){display:none}
@@ -146,6 +146,7 @@ header .navmenu{position:relative;z-index:999}
 header .menu-item:last-child{display:none}
 .posts__loop .post{border-bottom:.0625rem solid #ccc;padding-bottom:1.5625rem;margin-bottom:1.5625rem}
 .posts__loop .post:last-child{margin-bottom:0;border-bottom:0}
+.thumbnail__link img{height:300px;width:100%;-o-object-fit:cover;object-fit:cover}
 .home header{padding:1.5rem 0 1.5rem;margin-bottom:0;border-bottom:0;background-repeat:no-repeat;background-position:center;background-size:cover}
 .home header .logo__image,.home header .logo__text{-webkit-filter:invert(100%) sepia(39%) saturate(42%) hue-rotate(232deg) brightness(118%) contrast(94%);filter:invert(100%) sepia(39%) saturate(42%) hue-rotate(232deg) brightness(118%) contrast(94%)}
 .home .usp-container{background-color:#f5ce45;padding:1rem 0;margin-bottom:3.125rem}
@@ -233,6 +234,7 @@ header{padding:1.5rem 0;margin-bottom:4.5rem}
 .grid-column--third-two-half{grid-template-columns:.75fr 2fr .5fr}
 .logo__title{font-size:2.25rem}
 .logo__subtitle{font-size:1.125rem}
+.thumbnail__link img{height:250px}
 .neighborhood-photos{height:400px}
 .sitemap__loop{grid-template-columns:repeat(4,1fr)}
 }@media(min-width:1800px){.grid-column--three--xl{grid-template-columns:repeat(3,1fr)}
