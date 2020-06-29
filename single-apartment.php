@@ -71,7 +71,13 @@
                         <a href="<?php the_field('file') ?>" target="_blank" class="button button--primary">Bekijk</a>
                     </div>
                 <?php endif; ?>
-
+                <?php if (get_field('video')) : ?>
+                    <div class="embed-container">
+                        <h2>Video-rondleiding</h2>
+                        <p class="text--muted">Hieronder vindt u een korte rondleiding van de woning in video-formaat.</p>
+                        <?php the_field('video'); ?>
+                    </div>
+                <?php endif; ?>
                 <div class="grid grid-column__span--two grid-spacing--two">
                     <div>
                         <h2>Locatie</h2>
