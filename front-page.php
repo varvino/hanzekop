@@ -6,14 +6,38 @@
 
     <main class="container">
         <div class="frontpage-introduction grid grid-spacing--four">
-            <div class="grid grid-column--two grid-spacing--two align-items--center">
-                <div>
-                    <h2>Onze appartementen</h2>
-                    <p>Gelegen in het pittoreske Stavoren, voorziet Hanzekop Recreatiewoningen u van een onvergetelijke vakantie direct aan het IJsselmeer!</p>
-                    <a href="<?php echo get_post_type_archive_link('apartment'); ?>" class="button button--primary">Bekijk appartementen</a>
+            
+            <?php if (have_rows('introduction_container')) : ?>
+                <div class="grid grid-column--two grid-spacing--two align-items--center">
+                    <?php while (have_rows('introduction_container')) : the_row(); ?>
+
+                        <?php if (have_rows('text_container')) : ?>
+                            <?php while (have_rows('text_container')) : the_row(); ?>
+
+                                <div>
+                                    <?php if (get_sub_field('title')) : ?>
+                                        <h2><?php the_sub_field('title') ?></h2>
+                                    <?php endif; ?>
+
+                                    <?php if (get_sub_field('text')) : ?>
+                                        <p><?php the_sub_field('text') ?></p>
+                                    <?php endif; ?>
+                                </div>
+
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+
+                        <?php $image = get_sub_field('image'); ?>
+
+                        <?php if ($image) : ?>
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+
+                    <?php endwhile; ?>
                 </div>
-                <img class="frontpage-image border-radius--base" src="<?php echo get_theme_file_uri('assets/img/hanzekop-2.jpg') ?>" alt="Hanzekop Recreatiewoningen">
-            </div>
+                
+            <?php else : ?>
+            <?php endif; ?>
         </div>
     </main>
 
